@@ -68,4 +68,13 @@ let spaces = "   ";
         break; // To exit the loop
     }
 
+    let mut counter = 0;
+    let result = loop {
+        counter += 1;
+        if counter == 10 {
+            break counter*1000;
+        }
+    };
+    println!("The result is: {}", result);
+
 }
