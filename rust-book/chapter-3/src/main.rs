@@ -62,4 +62,10 @@ let spaces = "   ";
     let number = if condition {10} else {20};
     println!("The value of number is: {}", number);
 
+    // loop
+    loop {
+        println!("This is an infinite loop");
+        break; // To exit the loop
+    }
+
 }
