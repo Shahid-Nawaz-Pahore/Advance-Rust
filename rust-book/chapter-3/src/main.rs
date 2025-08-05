@@ -56,4 +56,10 @@ let spaces = "   ";
         println!("{} is not divisible by 4 or 3", y);
     }
 
+
+    // if in let statement
+    let condition = true;
+    let number = if condition {10} else {20};
+    println!("The value of number is: {}", number);
+
 }
