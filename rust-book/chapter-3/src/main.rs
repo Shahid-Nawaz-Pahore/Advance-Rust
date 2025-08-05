@@ -43,4 +43,17 @@ let spaces = "   ";
         println!("fail");
     }
 
+
+    // if-else if
+    let y = 6;
+    if y%4 == 0 {
+        println!("{} is divisible by 4", y);
+    } else if y%3 == 0 {
+        println!("{} is divisible by 3", x);
+    } else if y%2 == 0 {
+        println!("{} is divisible by 2", y);
+    } else {
+        println!("{} is not divisible by 4 or 3", y);
+    }
+
 }
