@@ -24,12 +24,23 @@ let spaces = "   ";
     println!("The sum is: {}", sum);
     // subtraction
     let difference = 95.5 - 4.3;
+    println!("The difference is: {}", difference);
     // multiplication
     let product = 4 * 30;
+    println!("The product is: {}", product);
     // division
     let quotient = 56.7 / 32.2;
+    println!("The quotient is: {}", quotient);
     let truncated = -5 / 3; // Results in -1
+    println!("The truncated value is: {}", truncated);
     // remainder
     let remainder = 43 % 5;
+    println!("The remainder is: {}", remainder);
+    let x = 80;
+    if x >= 80 {
+        println!("pass");
+    } else {
+        println!("fail");
+    }
 
 }
