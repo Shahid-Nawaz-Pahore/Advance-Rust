@@ -1,22 +1,28 @@
 fn main() {
     let mut s1 = String::from("Hello");
     s1.push_str(", world");
-    getOwnership(s1);
+    get_ownership(s1);
     let s2 = String::from("Hello");
-    let s3 = returnOwnership(s2);
-    println!("s3:{}", s3);
+    let s3 = return_ownership(s2);
+    let (s3, len) = calaculate_length(s3);
+    println!("s3:{}, length:{}", s3, len);
     let x = 5;
-    getCopy(x);
+    get_copy(x);
 }
 
-fn getOwnership(name:String){
+fn get_ownership(name:String){
     println!("name:{}",name);
 }
 
-fn getCopy(y:i32){
+fn get_copy(y:i32){
     println!("y:{}",y);
 }
 
-fn returnOwnership(name:String) -> String {
+fn return_ownership(name:String) -> String {
     name
+}
+
+fn calaculate_length(s:String)->(String,usize) {
+    let length = s.len();
+    (s, length)
 }
