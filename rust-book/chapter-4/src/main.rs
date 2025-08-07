@@ -26,3 +26,4 @@ fn calaculate_length(s:String)->(String,usize) {
     let length = s.len();
     (s, length)
 }
+
