@@ -1,3 +1,4 @@
+use std::option::Option<f64>;
 enum Direction {
     North,
     South,
@@ -10,6 +11,12 @@ enum Message {
     Write(String),          // single value
     ChangeColor(u8, u8, u8) // tuple
 }
+
+enum Option<T> {
+    Some(T),
+    None,
+}
+
 
 fn main() {
 
@@ -36,5 +43,20 @@ fn main() {
         Direction::South => println!("Heading down!"),
         Direction::East => println!("Moving right!"),
         Direction::West => println!("Moving left!"),
+    }
+
+    fn divide(a: f64, b: f64) -> Option<f64> {
+        if b == 0.0 {
+            None
+        } else {
+            Some(a / b)
+        }
+    }
+}
+fn divide(a: f64, b: f64) -> Option<f64> {
+    if b == 0.0 {
+        None
+    } else {
+        Some(a / b)
     }
 }
