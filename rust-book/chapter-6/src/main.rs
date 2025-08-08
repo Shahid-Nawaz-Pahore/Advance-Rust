@@ -4,6 +4,12 @@ enum Direction {
     East,
     West,
 }
+enum Message {
+    Quit,                   // no data
+    Move { x: i32, y: i32 },// named fields
+    Write(String),          // single value
+    ChangeColor(u8, u8, u8) // tuple
+}
 
 fn main() {
     let dir = Direction::North;
