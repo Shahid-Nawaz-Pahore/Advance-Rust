@@ -38,6 +38,12 @@ fn main() {
     }
 
     println!("\nYou entered:\n{}", input.trim());
+
+
+    let arr = [10, 20, 30, 40, 50];
+
+    let slice = &arr[1..4]; // Elements at index 1, 2, 3
+    println!("Slice: {:?}", slice); // [20, 30, 40]
 }
 
 fn get_ownership(name:String){
