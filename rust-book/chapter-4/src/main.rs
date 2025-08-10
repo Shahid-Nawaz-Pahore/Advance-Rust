@@ -55,6 +55,14 @@ fn main() {
     let arr = [1, 2, 3, 4];
     let slice = &arr[..]; // entire array
     println!("{:?}", slice); // [1, 2, 3, 4]
+    let mut numbers = [1, 2, 3, 4, 5];
+
+    let slice = &mut numbers[1..4]; // mutable borrow of part of the array
+    for num in slice.iter_mut() {
+        *num *= 10; // multiply each element by 10
+    }
+
+    println!("{:?}", numbers); // [1, 20, 30, 40, 5]
 }
 
 fn get_ownership(name:String){
