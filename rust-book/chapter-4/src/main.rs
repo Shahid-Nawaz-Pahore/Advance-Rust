@@ -63,7 +63,16 @@ fn main() {
     }
 
     println!("{:?}", numbers); // [1, 20, 30, 40, 5]
+
+    
+    let nums = vec![5, 10, 15, 20];
+    println!("Sum: {}", sum(&nums[1..3])); // sum of [10, 15]
 }
+
+fn sum(slice: &[i32]) -> i32 {
+    slice.iter().sum()
+}
+
 
 fn get_ownership(name:String){
     println!("name:{}",name);
