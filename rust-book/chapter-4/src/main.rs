@@ -8,6 +8,12 @@ fn main() {
     println!("s3:{}, length:{}", s3, len);
     let x = 5;
     get_copy(x);
+
+    let mut s = String::from("hello world");
+
+    let word = first_word(&s); // word will get the value 5
+
+    s.clear();
 }
 
 fn get_ownership(name:String){
@@ -25,5 +31,16 @@ fn return_ownership(name:String) -> String {
 fn calaculate_length(s:String)->(String,usize) {
     let length = s.len();
     (s, length)
+}
+fn first_word(s: &String) -> usize {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return i;
+        }
+    }
+
+    s.len()
 }
 
