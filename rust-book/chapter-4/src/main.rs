@@ -44,6 +44,12 @@ fn main() {
 
     let slice = &arr[1..4]; // Elements at index 1, 2, 3
     println!("Slice: {:?}", slice); // [20, 30, 40]
+    let text = String::from("Hello, Rust!");
+
+    let hello = &text[0..5]; // "Hello"
+    let rust = &text[7..11]; // "Rust"
+
+    println!("{} - {}", hello, rust);
 }
 
 fn get_ownership(name:String){
