@@ -50,6 +50,11 @@ fn main() {
     let rust = &text[7..11]; // "Rust"
 
     println!("{} - {}", hello, rust);
+
+
+    let arr = [1, 2, 3, 4];
+    let slice = &arr[..]; // entire array
+    println!("{:?}", slice); // [1, 2, 3, 4]
 }
 
 fn get_ownership(name:String){
