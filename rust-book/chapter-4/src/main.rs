@@ -1,3 +1,4 @@
+use std::io::{self, Write};
 fn main() {
     let mut s1 = String::from("Hello");
     s1.push_str(", world");
@@ -14,6 +15,29 @@ fn main() {
     let word = first_word(&s); // word will get the value 5
 
     s.clear();
+
+
+    let mut input = String::new();
+
+    println!("Enter your text (press Enter twice to finish):");
+
+    loop {
+        let mut line = String::new();
+
+        io::stdout().flush().unwrap(); // Ensures prompt prints immediately
+
+        io::stdin()
+            .read_line(&mut line)
+            .expect("Failed to read line");
+
+        if line.trim().is_empty() {
+            break; // Stops on empty line (Enter twice)
+        }
+
+        input.push_str(&line);
+    }
+
+    println!("\nYou entered:\n{}", input.trim());
 }
 
 fn get_ownership(name:String){
